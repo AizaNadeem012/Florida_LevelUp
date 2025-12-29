@@ -1321,6 +1321,85 @@ const Home = () => {
 
       <Marquee/>
 
+      {/* SERVICE AREA MAP SECTION */}
+<section className="bg-white py-20">
+  <div className="section-container">
+    <SectionHeader 
+      title="Our Service Area" 
+      subtitle="Serving Central Florida with professional mobile home services" 
+    />
+    
+    <div className="max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 className="text-2xl font-bold mb-6">Covering All of Central Florida</h3>
+          <p className="text-muted-foreground mb-6">
+            We proudly serve homeowners throughout Central Florida, providing fast, reliable service for all your mobile home needs. Our team is familiar with local requirements and can respond quickly to your needs.
+          </p>
+          
+          <div className="space-y-4 mb-8">
+            <div className="flex items-start gap-3">
+              <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <h4 className="font-semibold">Counties We Serve</h4>
+                <div className="grid grid-cols-2 gap-2 mt-2">
+                  {countiesList.map((county, idx) => (
+                    <span key={idx} className="text-sm text-muted-foreground">{county}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            
+            <div className="flex items-start gap-3">
+              <Truck className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <h4 className="font-semibold">Fast Response Time</h4>
+                <p className="text-sm text-muted-foreground">Most service calls scheduled within 48 hours</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start gap-3">
+              <Phone className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <h4 className="font-semibold">24/7 Emergency Service</h4>
+                <p className="text-sm text-muted-foreground">Available for urgent repairs and storm damage</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a href={TEL_LINK} className="w-full sm:w-auto">
+              <Button className="bg-primary text-white hover:bg-primary/90 px-6 py-3 rounded-xl flex items-center justify-center gap-2 transition-all">
+                <Phone className="h-4 w-4" /> Call Us
+              </Button>
+            </a>
+            <Link to="/contact" className="w-full sm:w-auto">
+              <Button className="w-full border border-primary text-primary hover:bg-primary/10 rounded-xl px-6 py-3 transition-all">
+                Request Service
+              </Button>
+            </Link>
+          </div>
+        </div>
+        
+        <div className="rounded-2xl overflow-hidden shadow-xl">
+          <div className="relative h-full min-h-[450px]">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1795352.9134898128!2d-81.646989!3d28.493136099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88dd10249a5fd6bd%3A0x1c8ca282e17f348d!2sCentral%20Florida%2C%20FL%2C%20USA!5e0!3m2!1sen!2s!4v1766936216348!5m2!1sen!2s" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0, minHeight: "450px" }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* FOOTER */}
       <footer className="bg-gray-900 text-white py-16">
        
