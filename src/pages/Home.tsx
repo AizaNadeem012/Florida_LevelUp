@@ -1145,7 +1145,7 @@ const Home = () => {
                 </div>
                 <div>
                   <div className="font-medium">Email Us</div>
-                  <div className="text-sm text-muted-foreground">info@example.com</div>
+                  <div className="text-sm text-muted-foreground">Coye@mobilehomelevelingandanchoringservice.com</div>
                 </div>
               </Link>
 
