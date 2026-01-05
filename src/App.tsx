@@ -127,7 +127,7 @@ const App: React.FC = () => {
 
                 {/* HUD Inspection */}
                 <Route
-                  path="/hud-inspection"
+                  path="/hud-certified-mobile-home-inspections"
                   element={<HudCertifiedInspection />}
                 />
 
