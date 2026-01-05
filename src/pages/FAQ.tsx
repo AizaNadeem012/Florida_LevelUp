@@ -1,149 +1,168 @@
 import React, { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
     q: "What Mobile Home Services Do You Offer in Central Florida?",
-    a: `We offer complete mobile home solutions including:
-• Mobile Home Leveling
-• Foundation Repair
-• Mobile Home Skirting Installation
-• Renovations & Remodeling
-• Waterproofing & Insulation
-• Pest Control Barriers
+    a: `At Florida Truly Level Mobile Home Service, we specialize in complete mobile home care solutions designed for Florida’s unique climate.
 
-We proudly serve Orlando, Tampa, Kissimmee, Lakeland, and surrounding areas.`,
+Our professional services include:
+
+• Mobile Home Leveling & Re-Leveling  
+• Pier & Foundation Repair  
+• Skirting Installation & Replacement  
+• Structural Inspections (HUD Certified)  
+• Waterproofing & Moisture Control  
+• Home Renovations & Remodeling  
+• Pest Barrier Installation  
+
+We proudly serve Orlando, Tampa, Kissimmee, Lakeland, and all surrounding Central Florida communities.`,
   },
   {
-    q: "How Do I Know If My Mobile Home Needs Leveling?",
-    a: `Signs your mobile home may need leveling include:
-• Uneven or sloping floors
-• Doors or windows sticking
-• Cracks in walls or ceilings
-• Gaps between walls and floors
+    q: "How Can I Tell If My Mobile Home Needs Leveling or Foundation Repair?",
+    a: `Mobile homes naturally settle over time, especially in Florida’s sandy soil. Common warning signs include:
 
-Contact us for a free professional assessment.`,
+• Floors that feel uneven or slanted  
+• Doors and windows that stick or do not close properly  
+• Visible cracks in walls, ceilings, or flooring  
+• Gaps between walls, floors, or baseboards  
+• Plumbing issues caused by shifting structure  
+
+If you notice any of these issues, we recommend a professional inspection to prevent further damage.`,
   },
   {
     q: "How Much Does Mobile Home Leveling Cost in Central Florida?",
-    a: `Mobile home leveling typically costs between $500 – $3,000 depending on:
-• Size of the home
-• Foundation type
-• Severity of leveling required
-• Soil conditions
+    a: `The cost of mobile home leveling varies based on several important factors, including:
 
-Call us for an accurate, no-obligation quote.`,
-  },
-  {
-    q: "Can I Re-Level My Mobile Home Myself?",
-    a: `DIY leveling is possible but risky.
-Improper leveling can cause structural damage.
-For long-term safety and stability, professional leveling is strongly recommended.`,
-  },
-  {
-    q: "What Are the Signs of Foundation Problems?",
-    a: `Common foundation issues include:
-• Cracks in floors or walls
-• Uneven flooring
-• Doors/windows not closing
-• Moisture or water damage under the home`,
-  },
-  {
-    q: "Is Mobile Home Skirting Necessary in Florida?",
-    a: `Yes. Skirting provides:
-• Weather protection
-• Energy efficiency
-• Pest prevention
-• Improved curb appeal
+• Size and length of the home  
+• Type of foundation or support system  
+• Severity of the settling or damage  
+• Ground and soil conditions  
 
-We offer vinyl, rock, and custom skirting options.`,
+On average, leveling services range from $500 to $3,000. We provide transparent pricing and free on-site estimates with no obligation.`,
   },
   {
-    q: "How Long Does It Take to Level a Mobile Home?",
-    a: `Most mobile home leveling projects are completed within 1–2 days.
-Time depends on home size, foundation type, and repair needs.`,
+    q: "Is It Safe to Re-Level a Mobile Home Myself?",
+    a: `While some homeowners attempt DIY leveling, it is not recommended due to safety and structural risks.
+
+Improper leveling can cause:
+• Permanent frame damage  
+• Plumbing and electrical issues  
+• Floor warping and wall cracking  
+
+Professional leveling ensures long-term stability, safety, and compliance with industry standards.`,
   },
   {
-    q: "Why Choose Florida Truly Level Mobile Home Service?",
-    a: `• 20+ years of experience
-• Licensed & insured
-• Local Central Florida experts
-• Honest pricing & quality workmanship`,
+    q: "What Are the Most Common Signs of Foundation Problems?",
+    a: `Foundation issues can worsen quickly if ignored. Key warning signs include:
+
+• Cracks forming in walls or flooring  
+• Uneven or sagging floors  
+• Doors and windows going out of alignment  
+• Moisture buildup or standing water beneath the home  
+
+Early detection helps reduce repair costs and protects your investment.`,
+  },
+  {
+    q: "Why Is Mobile Home Skirting Important in Florida?",
+    a: `Skirting is essential for protecting mobile homes in Florida’s climate. It provides:
+
+• Protection from heavy rain and moisture  
+• Improved insulation and energy efficiency  
+• Prevention of pests and rodents  
+• Enhanced curb appeal and property value  
+
+We install durable vinyl, rock, and custom skirting options to match your home.`,
+  },
+  {
+    q: "How Long Does a Mobile Home Leveling Project Take?",
+    a: `Most mobile home leveling projects are completed within one to two days.
+
+The exact timeline depends on the home’s size, foundation type, and the extent of the repairs required. Our team works efficiently while maintaining high-quality standards.`,
+  },
+  {
+    q: "Why Should I Choose Florida Truly Level Mobile Home Service?",
+    a: `Homeowners across Central Florida trust us because we offer:
+
+• Over 20 years of industry experience  
+• Licensed, insured, and HUD-certified professionals  
+• Honest pricing with no hidden fees  
+• High-quality workmanship  
+• Friendly, reliable, and local service  
+
+Your safety, comfort, and satisfaction are our top priorities.`,
   },
 ];
 
 export default function MobileHomeFAQ() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-gray-50 py-16">
-      <div className="max-w-5xl mx-auto px-4">
+    <section className="bg-[#f8fafc] py-24">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900">
-            Mobile Home Services FAQ – Central Florida
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+            Frequently Asked Questions
           </h1>
-          <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
-            Find answers about mobile home leveling, foundation repair,
-            skirting, and renovation services across Central Florida.
-          </p>
-          <p className="mt-4 font-semibold text-teal-600">
-            Call us today: <a href="tel:+16893405795">+1 (689) 340-5795</a>
+          <p className="mt-5 text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+            We’ve answered the most common questions homeowners ask about mobile
+            home leveling, foundation repair, skirting, and structural services
+            throughout Central Florida.
           </p>
         </div>
 
-        {/* FAQ Cards */}
-        <div className="space-y-4">
-          {faqs.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md border border-gray-100"
-            >
-              <button
-                className="w-full flex justify-between items-center p-6 text-left"
-                onClick={() =>
-                  setOpenIndex(openIndex === index ? null : index)
-                }
+        {/* FAQ Items */}
+        <div className="space-y-6">
+          {faqs.map((item, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <div
+                key={index}
+                className="bg-white rounded-3xl border border-gray-100 shadow-sm transition hover:shadow-md"
               >
-                <h3 className="text-lg font-semibold text-gray-800">
-                  {item.q}
-                </h3>
-                <span className="text-teal-600 text-2xl font-bold">
-                  {openIndex === index ? "−" : "+"}
-                </span>
-              </button>
+                <button
+                  onClick={() =>
+                    setOpenIndex(isOpen ? null : index)
+                  }
+                  className="w-full flex items-start justify-between gap-6 p-8 text-left"
+                >
+                  <h3 className="text-xl font-semibold text-gray-900 leading-snug">
+                    {item.q}
+                  </h3>
+                  <ChevronDown
+                    className={`h-6 w-6 mt-1 text-teal-600 transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
 
-              {openIndex === index && (
-                <div className="px-6 pb-6 text-gray-600 whitespace-pre-line">
-                  {item.a}
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    isOpen ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="px-8 pb-8 text-gray-600 whitespace-pre-line leading-relaxed text-[15px]">
+                    {item.a}
+                  </div>
                 </div>
-              )}
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
 
-        {/* CTA */}
-        <div className="mt-14 text-center bg-teal-600 text-white p-10 rounded-2xl shadow-lg">
-          <h2 className="text-2xl font-bold">
-            Ready to Get Started?
-          </h2>
-          <p className="mt-2">
-            Get a free on-site estimate for mobile home leveling,
-            foundation repair, or skirting installation.
+        {/* Soft CTA */}
+        <div className="mt-24 text-center">
+          <p className="text-lg text-gray-700">
+            Still have questions or need professional advice?
           </p>
-          <div className="mt-6 flex justify-center gap-4 flex-wrap">
-            <a
-              href="tel:+16893405795"
-              className="bg-white text-teal-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100"
-            >
-              Call Now
-            </a>
-            <a
-              href="/contact"
-              className="bg-teal-800 px-6 py-3 rounded-full font-semibold hover:bg-teal-900"
-            >
-              Request Free Estimate
-            </a>
-          </div>
+          <p className="mt-2 font-semibold text-teal-700 text-xl">
+            Call us at{" "}
+            <a href="tel:+16893405795" className="underline">
+              +1 (689) 340-5795
+            </a>{" "}
+            for a free consultation.
+          </p>
         </div>
       </div>
     </section>
