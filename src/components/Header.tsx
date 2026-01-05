@@ -32,7 +32,7 @@ const SocialIcon = ({
 );
 
 const services = [
-  { name: "HUD Structural Inspection", path: "/hud-inspection" },
+  { name: "HUD Structural Inspection", path: "/hud-certified-mobile-home-inspections" },
   { name: "Mobile Home Leveling & Re-leveling", path: "/services/leveling" },
   { name: "Ground Anchors Installation", path: "/services/ground-anchors" },
   { name: "Tie-Down Systems", path: "/services/tie-down" },
