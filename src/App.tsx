@@ -48,7 +48,7 @@ locations.forEach((loc) => {
 
 
 // HUD Inspection
-import HudCertifiedInspection from "./pages/hud-inspection";
+import HudCertifiedInspection from "./pages/hud-certified-mobile-home-inspections";
 
 // Service Pages
 import Leveling from "./pages/services/Leveling";
