@@ -15,6 +15,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Counties from "./pages/Counties";
 import NotFound from "./pages/NotFound";
+import FAQ from "./pages/FAQ";
 
 // Location Pages (HIDDEN – URL ONLY) - Legacy routes
 import Sanford from "./pages/sanford";
@@ -90,6 +91,7 @@ const App: React.FC = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/counties" element={<Counties />} />
+                <Route path="/Faq" element={<FAQ />} />
 
                 {/* 🔒 Hidden Location Routes (SEO Pages) - Legacy */}
                 <Route path="/sanford" element={<Sanford />} />
