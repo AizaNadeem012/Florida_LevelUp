@@ -58,16 +58,13 @@ const Header = () => {
               className="h-10 w-auto object-contain"
             />
             <span className="hidden md:block text-base font-semibold leading-none">
-              Florida Truly Level <br/> Mobile Home Service
+              Florida Truly Level <br /> Mobile Home Service
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center justify-center gap-6">
-            <Link
-              to="/"
-              className="text-[13px] font-medium tracking-wide hover:text-primary"
-            >
+            <Link to="/" className="text-[13px] font-medium hover:text-primary">
               Home
             </Link>
 
@@ -105,24 +102,20 @@ const Header = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Link
-              to="/counties"
-              className="text-[13px] font-medium tracking-wide hover:text-primary"
-            >
+            <Link to="/counties" className="text-[13px] font-medium hover:text-primary">
               Counties Served
             </Link>
 
-            <Link
-              to="/about"
-              className="text-[13px] font-medium tracking-wide hover:text-primary"
-            >
+            <Link to="/about" className="text-[13px] font-medium hover:text-primary">
               About
             </Link>
 
-            <Link
-              to="/contact"
-              className="text-[13px] font-medium tracking-wide hover:text-primary"
-            >
+            {/* ✅ FAQ Added */}
+            <Link to="/faq" className="text-[13px] font-medium hover:text-primary">
+              FAQ
+            </Link>
+
+            <Link to="/contact" className="text-[13px] font-medium hover:text-primary">
               Contact
             </Link>
           </nav>
@@ -147,11 +140,7 @@ const Header = () => {
             className="lg:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
@@ -188,9 +177,16 @@ const Header = () => {
               <Link to="/counties" onClick={() => setMobileMenuOpen(false)}>
                 Counties Served
               </Link>
+
               <Link to="/about" onClick={() => setMobileMenuOpen(false)}>
                 About
               </Link>
+
+              {/* ✅ FAQ Added */}
+              <Link to="/faq" onClick={() => setMobileMenuOpen(false)}>
+                FAQ
+              </Link>
+
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
                 Contact
               </Link>
