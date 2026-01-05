@@ -69,7 +69,7 @@ const Header = () => {
             </Link>
 
             <Link
-              to="/hud-inspection"
+              to="/hud-certified-mobile-home-inspections"
               className="text-[13px] font-semibold text-primary flex items-center gap-1"
             >
               <ShieldCheck className="h-4 w-4" />
@@ -153,7 +153,7 @@ const Header = () => {
               </Link>
 
               <Link
-                to="/hud-inspection"
+                to="/hud-certified-mobile-home-inspections"
                 className="font-semibold text-primary"
                 onClick={() => setMobileMenuOpen(false)}
               >
